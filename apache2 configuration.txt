@@ -1,0 +1,19 @@
+apt insall php
+sudo chown -R www-data:www-data  /var/www/html
+sudo chmod -R 755 /var/www/html
+
+sudo a2dissite 000-default.conf
+sudo nano /etc/apache2/sites-available/php.conf
+<VirtualHost *:80>
+    ServerName your_ip_address
+    DocumentRoot /var/www/html
+    <Directory /var/www/html>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    </Directory>
+</VirtualHost>
+
+sudo a2ensite php.conf
+sudo systemctl restart apache2

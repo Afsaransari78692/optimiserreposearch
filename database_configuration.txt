@@ -1,5 +1,6 @@
-
-
+CREATE USER 'afsar'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON search3.* TO 'afsar'@'localhost';
+FLUSH PRIVILEGES;
 create database search3;
 use search3;
 
