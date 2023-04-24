@@ -1,5 +1,6 @@
 <?php
 
+
 $connection = mysqli_connect('localhost','root','','search3');
 if(isset($_POST['submit'])){
     $username = $_POST['user'];
