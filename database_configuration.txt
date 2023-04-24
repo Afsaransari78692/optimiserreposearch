@@ -1,7 +1,12 @@
+
+
 create database search3;
 use search3;
 
 
 create table user(id int not null,user varchar(255) not null, pass varchar(255) not null);
+
+//dont put here your personal password because repository is publicly available
+
 insert into user values(1,'afsar','password');
 create table afsar(id int auto_increment primary key,repositoryname varchar(255)not null,dev varchar(255)not null,test varchar(255) not null,sand varchar(255)not null,prod varchar(255)not null);
