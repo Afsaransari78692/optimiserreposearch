@@ -124,6 +124,10 @@ a:hover {
   <nav>
     <ul>
       <li><p>Hi</p><?php echo $_SESSION['ADMIN']?></li>
+      <li><?php
+$ip_address = $_SERVER['REMOTE_ADDR'];
+echo "Be Carefull In Admin Area Your IP address is: " . $ip_address; ?>
+</li>
       <li><form method="post">
         <button type="submit"name="done" id="set">Logout</button>
     </form></li>
